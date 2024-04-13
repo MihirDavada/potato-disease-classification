@@ -29,12 +29,11 @@ app.add_middleware(
 )
 
 
-endpoint_first_version = "http://localhost:8501/v1/models/potatoes_model/versions/1:predict"
-endpoint_second_version = "http://localhost:8501/v1/models/potatoes_model/versions/2:predict"
-endpoint_third_version = "http://localhost:8501/v1/models/potatoes_model/versions/3:predict"
+endpoint_first_version = "http://localhost:8601/v1/models/potatoes_model/versions/1:predict"
+endpoint_second_version = "http://localhost:8601/v1/models/potatoes_model/versions/2:predict"
+endpoint_third_version = "http://localhost:8601/v1/models/potatoes_model/versions/3:predict"
 # Endpoint Latest Version
-endpoint = "http://localhost:8501/v1/models/potatoes_model:predict"
-
+endpoint = "http://localhost:8601/v1/models/potatoes_model:predict"
 
 CLASS_NAMES = ["Early Blight", "Late Blight", "Healthy"]
 
@@ -57,7 +56,7 @@ async def predict(
         "instances": img_batch.tolist()
     }
 
-    response = requests.post(endpoint, json=json_data)
+    response = requests.post(endpoint_first_version, json=json_data)
     prediction = np.array(response.json()["predictions"][0])
 
     predicted_class = CLASS_NAMES[np.argmax(prediction)]
