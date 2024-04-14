@@ -11,5 +11,6 @@ The technical stack for this project includes:
 - Deployment of the trained model as a TensorFlow Serving (tf serving) application
 - Exposure of the model through a FastAPI backend
 
-By integrating this solution into their workflow, potato farmers can make more informed decisions, reduce waste, and maintain the health and productivity of their crops. This 
-project exemplifies my commitment to leveraging cutting-edge technology to solve real-world problems and make a positive impact on the agricultural community.
+By integrating this solution into their workflow, potato farmers can make more informed decisions, reduce waste, and maintain the health and productivity of their crops. This project exemplifies my commitment to leveraging cutting-edge technology to solve real-world problems and make a positive impact on the agricultural community.
+
+![image](https://github.com/MihirDavada/potato-disease-classification/assets/101976200/92959849-48f1-4a17-be22-4fb46bd9e836)
